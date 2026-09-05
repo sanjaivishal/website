@@ -7,7 +7,7 @@ const navObserver = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting) return;
     navLinks.forEach((link) => link.removeAttribute('aria-current'));
     const active = document.querySelector(`.site-header nav a[href="#${entry.target.id}"]`);
-    if (active) active.setAttribute('aria-current', 'location');
+    if (active) active.setAttribute('aria-current', 'page');
   });
 }, { rootMargin: '-35% 0px -55% 0px', threshold: 0 });
 
